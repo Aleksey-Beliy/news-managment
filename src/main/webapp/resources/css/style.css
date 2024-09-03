@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center; /* Центрирование содержимого по горизонтали */
+    align-items: flex-start; /* Начало содержимого от верхней части страницы */
+    min-height: 100vh; /* Обеспечивает высоту страницы не менее высоты окна */
+}
+
+main {
+    margin-top: 80px; /* Учитываем высоту заголовка */
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Ограничение максимальной ширины */
+    background-color: #e6f2ff;
+    box-sizing: border-box; /* Учитываем отступы в размерах */
+}
+
+header {
+    background-color: #0066cc;
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+}
+
+
+
+.news-container {
+    width: 85%;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.news-block {
+    margin: 25px 0;
+    background-color: #fafafa;
+    padding: 20px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.news-block:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-block .category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #0066cc;
+    color: #fff;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.news-block h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #0066cc;
+}
+
+.news-block img {
+    width: 80%; /* Уменьшенная ширина, например, 80% от контейнера */
+    height: 250px; /* Увеличенная высота для всех изображений */
+    object-fit: cover; /* Обрезка изображения для заполнения контейнера без искажения */
+    border-radius: 8px;
+    display: block; /* Чтобы изображение оставалось блочным элементом */
+    margin: 0 auto; /* Центрирование изображения внутри родительского контейнера */
+}
+
+
+.article-content p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.article-content .read-more {
+     color: #0066cc;
+            text-decoration: none;
+              position: relative; 
+    z-index: 2; 
+
+}
+
+.article-content .read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* Декоративные стили для блочных элементов */
+.news-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 25px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content div {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-content div:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #0066cc; 
+    border: none;
+    color: white;
+    padding: 12px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #004b99;
+    transform: translateY(-2px);
+}
